@@ -1,4 +1,3 @@
-
 const express = require("express");
 const cors = require ("cors");
 const axios = require("axios");
@@ -7,7 +6,7 @@ const PORT = 8080;
 const app = express();
 app.use(cors());
 
-const data = require("./data/weather.json");
+const data = require("./weather.json");
 
 app.get("/", (request, response) => {
  response.status(200).json("You are looking at the root route.");
@@ -23,7 +22,7 @@ try{
  const res = await axios.get(API);
 
  res.data.data.forEach((day) => {
- const ff = {  date: day.valid_date, description: day.weather.description };
+ const fc = {  date: day.valid_date, description: day.weather.description };
  forecasts.push(fc);
  });
  
