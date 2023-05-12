@@ -54,7 +54,7 @@ async function getWeather(newLocation) {
 
   return (
     <div className="App">
-    <h1>City Ecplorer </h1>
+    <h1>City Explorer </h1>
     <input onChnage={handleChange} placeholder="Place Name" />
     <button onClick={getLocation}>Explore</button>
     <p>{apiError}</p>
